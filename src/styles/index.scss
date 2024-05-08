@@ -64,6 +64,16 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+
 input,
 button,
 textarea,
@@ -82,7 +92,59 @@ select {
   }
 }
 
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .app {
   height: 100vh;
   width: 100vw;
+
+  position: relative;
+}
+
+header {
+  @include flexCenter();
+  gap: 24px;
+
+  position: absolute;
+  top: 32px;
+  right: 0;
+  height: fit-content;
+  width: 95%;
+  background: rebeccapurple;
+}
+
+nav {
+  @include flexCenter();
+  width: 100%;
+  
+  &::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    height: 1px;
+    width: 100%;
+  }
+  
+  ul {
+    display: flex;
+    gap: 42px;
+    padding: 32px 80px;
+    
+    position: relative;
+    z-index: 2;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+    }
+  }
 }
