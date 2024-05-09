@@ -102,7 +102,6 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   width: 95%;
-  background: rebeccapurple;
 }
 
 nav {
@@ -121,8 +120,11 @@ nav::before {
 }
 nav ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 42px;
-  padding: 32px 80px;
+  padding: 0 80px;
+  height: 88px;
   position: relative;
   z-index: 2;
 }
@@ -134,4 +136,30 @@ nav ul::after {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.05s cubic-bezier(0.075, 0.82, 0.165, 1);
+  height: 0;
+  background: var(--clr-light);
+  opacity: 0;
+}
+nav ul li:hover::after {
+  height: 4px;
+  opacity: 1;
+}
+nav ul li a {
+  display: flex;
+  gap: 8px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,6 +1,8 @@
 import * as React from "react";
 import iconLogo from "./assets/shared/logo.svg";
 
+const menuBtns = ["home", "destination", "crew", "technology"];
+
 function App() {
   return (
     <div className="App">
@@ -10,30 +12,16 @@ function App() {
         </div>
         <nav>
           <ul>
-            <li>
-              <a href="#">
-                <span>00 </span>
-                home
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>00 </span>
-                destination
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>00 </span>
-                crew
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>00 </span>
-                technology
-              </a>
-            </li>
+            {menuBtns.map((menu, i) => {
+              return (
+                <li key={i}>
+                  <a href="#">
+                    <span>0{i}</span>
+                    {menu}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </header>
