@@ -162,4 +162,9 @@ nav ul li:hover::after {
 nav ul li a {
   display: flex;
   gap: 8px;
+}
+nav ul li.active::after {
+  height: 4px;
+  background: var(--clr-white);
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

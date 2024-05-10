@@ -1,0 +1,79 @@
+header {
+  @include flexCenter();
+  gap: 24px;
+
+  position: absolute;
+  top: 32px;
+  right: 0;
+  height: fit-content;
+  width: 95%;
+}
+
+nav {
+  @include flexCenter();
+  width: 100%;
+  
+  &::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    height: 1px;
+    width: 100%;
+  }
+  
+  ul {
+    @include flexCenter();
+    gap: 42px;
+    padding: 0 80px;
+    height: 88px;
+    
+    position: relative;
+    z-index: 2;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+    }
+    
+    li {
+      @include flexCenter();
+      height: 100%;
+      position: relative;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        transition: 0.05s cubic-bezier(0.075, 0.82, 0.165, 1);
+        height: 0;
+        background: var(--clr-light);
+        opacity: 0;
+      }
+
+      &:hover::after {
+        height: 4px;
+        opacity: 1;
+      }
+
+      a {
+        display: flex;
+        gap: 8px;
+      }
+    }
+
+    li.active {
+      &::after {
+        height: 4px;
+        background: var(--clr-white);
+        opacity: 1;
+      }
+    }
+  }
+}

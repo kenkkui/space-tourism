@@ -1,30 +1,13 @@
 import * as React from "react";
-import iconLogo from "./assets/shared/logo.svg";
-
-const menuBtns = ["home", "destination", "crew", "technology"];
+import { useState } from "react";
+import Header from "./components/Header/Header";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(0);
+
   return (
     <div className="App">
-      <header>
-        <div id="logo-icon">
-          <img src={iconLogo} alt="Logo" />
-        </div>
-        <nav>
-          <ul>
-            {menuBtns.map((menu, i) => {
-              return (
-                <li key={i}>
-                  <a href="#">
-                    <span>0{i}</span>
-                    {menu}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </header>
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   );
 }
