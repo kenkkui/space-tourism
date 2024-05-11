@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,7 +16,7 @@ function App() {
         <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setCurrentPage={setCurrentPage} />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<Crew />} />
           <Route path="/technology" element={<Technology />} />
