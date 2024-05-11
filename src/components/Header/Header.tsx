@@ -1,5 +1,7 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import iconLogo from "../../assets/shared/logo.svg";
+
 const menuBtns = ["home", "destination", "crew", "technology"];
 
 interface HeaderProps {
@@ -23,10 +25,10 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className={i === currentPage ? "active" : ""}
                 onClick={() => setCurrentPage(i)}
               >
-                <a href="#">
+                <Link to={`/${menu}}`}>
                   <span>0{i}</span>
                   {menu}
-                </a>
+                </Link>
               </li>
             );
           })}
