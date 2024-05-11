@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import iconLogo from "../../assets/shared/logo.svg";
 
-const menuBtns = ["home", "destination", "crew", "technology"];
+const menuBtns = ["destination", "crew", "technology"];
 
 interface HeaderProps {
   currentPage: number;
@@ -18,7 +18,19 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
       <nav>
         <ul>
+          <li
+            className={currentPage === 0 ? "active" : ""}
+            onClick={() => setCurrentPage(0)}
+          >
+            <Link to="/">
+              <span>00</span>
+              home
+            </Link>
+          </li>
+
           {menuBtns.map((menu, i) => {
+            i += 1;
+
             return (
               <li
                 key={i}
