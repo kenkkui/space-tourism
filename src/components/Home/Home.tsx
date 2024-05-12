@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 interface HomeProps {
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }

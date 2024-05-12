@@ -63,7 +63,8 @@ nav {
       }
 
       a {
-        display: flex;
+        @include flexCenter();
+        height: 100%;
         gap: 8px;
       }
     }

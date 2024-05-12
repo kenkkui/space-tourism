@@ -37,7 +37,7 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className={i === currentPage ? "active" : ""}
                 onClick={() => setCurrentPage(i)}
               >
-                <Link to={`/${menu}}`}>
+                <Link to={`/${menu}`}>
                   <span>0{i}</span>
                   {menu}
                 </Link>
