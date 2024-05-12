@@ -6,7 +6,7 @@
 
   display: flex;
   align-items: flex-end;
-  padding: 136px;
+  padding: 0 136px 60px;
 }
 
 
@@ -14,5 +14,29 @@
   display: flex;
   gap: 80px;
 
-  .illustration
+  .illustration {
+    h1 {
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      &::before {
+        content: "01";
+        font-weight: 700;
+        opacity: 0.3;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .description {
+    ul {
+      display: flex;
+      gap: 24px;
+
+      li {
+        text-transform: uppercase;
+      }
+    }
+  }
 }

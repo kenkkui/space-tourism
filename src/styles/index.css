@@ -55,6 +55,15 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
 img {
   display: block;
 }
@@ -264,10 +273,28 @@ nav ul li.active::after {
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
-  padding: 136px;
+  padding: 0 136px 60px;
 }
 
 .destination-content {
   display: flex;
   gap: 80px;
+}
+.destination-content .illustration h1 {
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.destination-content .illustration h1::before {
+  content: "01";
+  font-weight: 700;
+  opacity: 0.3;
+  margin-right: 16px;
+}
+.destination-content .description ul {
+  display: flex;
+  gap: 24px;
+}
+.destination-content .description ul li {
+  text-transform: uppercase;
 }/*# sourceMappingURL=index.css.map */
