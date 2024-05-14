@@ -273,28 +273,55 @@ nav ul li.active::after {
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
-  padding: 0 136px 60px;
+  padding: 0 136px 80px;
 }
 
 .destination-content {
   display: flex;
-  gap: 80px;
+  gap: 160px;
+  background: grey;
 }
-.destination-content .illustration h1 {
-  margin-bottom: 32px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.destination-content .illustration {
+  background: rebeccapurple;
+  aspect-ratio: 1/1;
+  height: 445px;
 }
-.destination-content .illustration h1::before {
-  content: "01";
-  font-weight: 700;
-  opacity: 0.3;
-  margin-right: 16px;
+.destination-content .illustration img {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 .destination-content .description ul {
   display: flex;
   gap: 24px;
 }
 .destination-content .description ul li {
+  position: relative;
+  padding-bottom: 12px;
+  color: var(--clr-light);
   text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.destination-content .description ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--clr-light);
+  opacity: 0;
+}
+.destination-content .description ul li:hover::after {
+  opacity: 1;
+}
+.destination-content .description ul li.active {
+  color: var(--clr-white);
+  scale: 1.05;
+}
+.destination-content .description ul li.active::after {
+  background: var(--clr-white);
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
