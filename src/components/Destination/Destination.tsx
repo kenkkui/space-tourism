@@ -20,22 +20,35 @@ export default function Destination() {
         </div>
 
         <div className="description">
-          <ul>
-            {data.destinations.map((item, i) => {
-              return (
-                <li
-                  key={i}
-                  onClick={() => setCurrDestination(i)}
-                  className={currDestination === i ? "active" : ""}
-                >
-                  {item.name}
-                </li>
-              );
-            })}
-          </ul>
+          <main>
+            <ul>
+              {data.destinations.map((item, i) => {
+                return (
+                  <li
+                    key={i}
+                    onClick={() => setCurrDestination(i)}
+                    className={currDestination === i ? "active" : ""}
+                  >
+                    {item.name}
+                  </li>
+                );
+              })}
+            </ul>
 
-          {/* <h1>{data.destinations[currDestination].name}</h1>
-          <p>{data.destinations[currDestination].description}</p> */}
+            <h1>{data.destinations[currDestination].name}</h1>
+            <p>{data.destinations[currDestination].description}</p>
+          </main>
+
+          <aside>
+            <section>
+              <h6>avg. distance</h6>
+              <p>{data.destinations[currDestination].distance}</p>
+            </section>
+            <section>
+              <h6>est. travel time</h6>
+              <p>{data.destinations[currDestination].travel}</p>
+            </section>
+          </aside>
         </div>
       </div>
     </section>

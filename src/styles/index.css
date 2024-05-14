@@ -282,7 +282,6 @@ nav ul li.active::after {
   background: grey;
 }
 .destination-content .illustration {
-  background: rebeccapurple;
   aspect-ratio: 1/1;
   height: 445px;
 }
@@ -291,11 +290,16 @@ nav ul li.active::after {
   height: 100%;
   width: 100%;
 }
-.destination-content .description ul {
+.destination-content .description main {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--clr-light);
+}
+.destination-content .description main ul {
   display: flex;
   gap: 24px;
 }
-.destination-content .description ul li {
+.destination-content .description main ul li {
   position: relative;
   padding-bottom: 12px;
   color: var(--clr-light);
@@ -304,7 +308,7 @@ nav ul li.active::after {
   cursor: pointer;
   transition: 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.destination-content .description ul li::after {
+.destination-content .description main ul li::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -314,14 +318,33 @@ nav ul li.active::after {
   background: var(--clr-light);
   opacity: 0;
 }
-.destination-content .description ul li:hover::after {
+.destination-content .description main ul li:hover::after {
   opacity: 1;
 }
-.destination-content .description ul li.active {
+.destination-content .description main ul li.active {
   color: var(--clr-white);
   scale: 1.05;
 }
-.destination-content .description ul li.active::after {
+.destination-content .description main ul li.active::after {
   background: var(--clr-white);
   opacity: 1;
+}
+.destination-content .description main h1 {
+  line-height: 1.8;
+  font-size: var(--fs-800);
+  font-family: var(--ff-serif);
+  text-transform: uppercase;
+}
+.destination-content .description aside {
+  display: flex;
+  gap: 64px;
+  text-transform: uppercase;
+}
+.destination-content .description aside h6 {
+  color: var(--clr-light);
+  font-size: 14px;
+}
+.destination-content .description aside p {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-500);
 }/*# sourceMappingURL=index.css.map */
