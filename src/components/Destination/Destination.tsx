@@ -17,7 +17,7 @@ export default function Destination() {
       <div className="destination-content">
         <div className="illustration">
           <img src={destinations[currDestination]} alt="Moon" />
-          <h1>pick your destination</h1>
+          <h1 className="tab-subtitle">pick your destination</h1>
         </div>
 
         <div className="description">

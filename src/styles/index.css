@@ -107,6 +107,21 @@ section.page {
   width: 100%;
 }
 
+.tab-subtitle {
+  position: absolute;
+  top: -72px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.tab-subtitle::before {
+  content: "01";
+  font-weight: 700;
+  opacity: 0.3;
+  margin-right: 16px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -285,20 +300,6 @@ nav ul li.active::after {
   height: 445px;
   position: relative;
 }
-.destination-content .illustration h1 {
-  position: absolute;
-  top: -72px;
-  left: 0;
-  text-transform: uppercase;
-  font-size: 24px;
-  letter-spacing: 3px;
-}
-.destination-content .illustration h1::before {
-  content: "01";
-  font-weight: 700;
-  opacity: 0.3;
-  margin-right: 16px;
-}
 .destination-content .illustration img {
   display: block;
   height: 100%;
@@ -361,4 +362,31 @@ nav ul li.active::after {
 .destination-content .description aside p {
   font-family: var(--ff-serif);
   font-size: var(--fs-500);
+}
+
+.crew.page {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 160px 136px 80px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.crew-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.crew-content .tab-subtitle {
+  position: static;
+}
+.crew-content .tab-subtitle::before {
+  content: "02";
 }/*# sourceMappingURL=index.css.map */
