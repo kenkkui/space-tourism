@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SubTab from "../SubTab";
 import data from "../../data.json";
 
 const technologyImages = [
@@ -17,12 +18,19 @@ function Technology() {
         <h1 className="tab-subtitle">space launch 101</h1>
 
         <section className="technology">
-          
+          <section className="technology-1">
+            <SubTab
+              subTabName="technology"
+              map={technologyImages}
+              handleClick={setCurrTechnology}
+              clickState={currTechnology}
+            />
 
-          <section className="description">
-            <h3>The technology</h3>
-            <h1>{name}</h1>
-            <p>{description}</p>
+            <section className="description">
+              <h3>The technology</h3>
+              <h1>{name}</h1>
+              <p>{description}</p>
+            </section>
           </section>
 
           <section className="technology-images">

@@ -1,19 +1,27 @@
 interface SubTabProps {
+  subTabName: string;
   map: number[];
   handleClick: React.Dispatch<React.SetStateAction<number>>;
   clickState: number;
 }
 
-export default function SubTab({ map, handleClick, clickState }: SubTabProps) {
+export default function SubTab({
+  subTabName,
+  map,
+  handleClick,
+  clickState,
+}: SubTabProps) {
   return (
-    <section className="crew-select">
-      {map.map((item, i) => {
+    <section className={`${subTabName}-select`}>
+      {map.map((_, i) => {
         return (
           <button
-            key={item}
+            key={i}
             onClick={() => handleClick(i)}
             className={i === clickState ? "active" : ""}
-          ></button>
+          >
+            {subTabName !== "crew" && i}
+          </button>
         );
       })}
     </section>

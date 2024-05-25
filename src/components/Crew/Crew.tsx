@@ -32,6 +32,7 @@ export default function Crew() {
         </section>
 
         <SubTab
+          subTabName="crew"
           map={crewImages}
           handleClick={setCurrCrewMember}
           clickState={currCrewMember}
