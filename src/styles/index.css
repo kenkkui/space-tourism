@@ -389,4 +389,52 @@ nav ul li.active::after {
 }
 .crew-content .tab-subtitle::before {
   content: "02";
+}
+.crew-content .crew {
+  display: flex;
+  flex: 1;
+}
+.crew-content .crew .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 50%;
+}
+.crew-content .crew .description h3 {
+  color: var(--clr-light);
+  font-family: var(--ff-serif);
+  text-transform: uppercase;
+  font-size: var(--fs-600);
+}
+.crew-content .crew .description h1 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-700);
+  text-transform: uppercase;
+}
+.crew-content .crew .crew-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.crew-content .crew .crew-image img {
+  filter: drop-shadow(8px 12px 12px rgba(26, 25, 25, 0.6));
+}
+.crew-content .crew-select {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 1.2rem;
+}
+.crew-content .crew-select button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  height: 24px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.crew-content .crew-select button.active {
+  background: var(--clr-light);
 }/*# sourceMappingURL=index.css.map */
