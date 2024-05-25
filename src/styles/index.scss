@@ -141,7 +141,30 @@ section.page {
   }
 }
 
+.crew-select {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  gap: 1.2rem;
+
+  button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    height: 24px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &.active {  
+      background: var(--clr-light);
+    }
+  }
+}
+
 @import "../components/Header/Header";
 @import "../components/Home/Home";
 @import "../components/Destination/Destination";
-@import "../components/Crew/Crew"
+@import "../components/Crew/Crew";
+@import "../components/Technology/Technology";

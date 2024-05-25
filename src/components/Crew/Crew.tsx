@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "../../data.json";
+import SubTab from "../SubTab";
 const crewImages = [
   require("../../assets/crew/image-douglas-hurley.webp"),
   require("../../assets/crew/image-anousheh-ansari.webp"),
@@ -30,17 +31,11 @@ export default function Crew() {
           </div>
         </section>
 
-        <section className="crew-select">
-          {crewImages.map((crew, i) => {
-            return (
-              <button
-                key={i}
-                onClick={() => setCurrCrewMember(i)}
-                className={i === currCrewMember ? "active" : ""}
-              ></button>
-            );
-          })}
-        </section>
+        <SubTab
+          map={crewImages}
+          handleClick={setCurrCrewMember}
+          clickState={currCrewMember}
+        />
       </section>
     </section>
   );
